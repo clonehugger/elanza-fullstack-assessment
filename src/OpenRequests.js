@@ -26,8 +26,7 @@ export const OpenRequests = () => {
                                             {data.name}
                                         </div>
                                         <div className="column">
-                                            <button className="button is-link has-background-elanza">View details
-                                                of {key}</button>
+                                            <button className="button is-link has-background-elanza">View details</button>
                                         </div>
                                     </div>
                                 </div>
