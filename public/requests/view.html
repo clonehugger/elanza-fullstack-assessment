@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+      This HTML file includes the form submission for new requests.
+    -->
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+            name="description"
+            content="Web site created using create-react-app"
+    />
+    <title>View Request</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<!-- START OF NAV -->
+<nav class="navbar" role="navigation" aria-label="main navigation" style="background-image: url('https://elanza.nl/static/media/bg-mobile.873827a2.svg'); width: 100%; background-position: center 0px; background-repeat: no-repeat no-repeat; border-bottom: 1px solid #00BEB9">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="https://elanza.nl/static/media/logo-white.2f37cd59.svg" width="112" height="28">
+        </a>
+
+        <a role="button" class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item has-text-white" href="/">
+                Open Requests
+            </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    More
+                </a>
+
+                <div class="navbar-dropdown">
+                    <a class="navbar-item">
+                        Closed Requests
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-white is-outlined" href="/requests/new.html">
+                        Post New Request
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- END OF NAV -->
+
+<!-- START OF CONTENT -->
+<section class="section">
+    <h2 class="title has-text-weight-light" style="color: #00BEB9">Care request information</h2>
+    <form class="form">
+        <input class="is-hidden" type="text" name="status" value="open">
+        <div class="field">
+            <label class="label">Client Name</label>
+            <div class="control">
+                <input class="input" disabled type="text" placeholder="Jane Doe" name="name" required>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Kind of Care</label>
+            <div class="control">
+                <div class="select">
+                    <select name="careKind" required disabled>
+                        <option disabled>Select from dropdown</option>
+                        <option value="household">Household</option>
+                        <option value="medical">Medical</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="label">
+            <label class="field-label">Start and End Time</label>
+        </div>
+        <div class="field is-horizontal">
+
+            <div class="field-body">
+                <div class="field">
+                    <p class="control is-expanded">
+                        <input class="input" disabled type="date" placeholder="Start Time" name="startTime" required>
+                    </p>
+                </div>
+                <div class="field">
+                    <p class="control is-expanded">
+                        <input class="input" disabled type="date" placeholder="End Time" name="endTime" required>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Extra Information</label>
+            <div class="control">
+                <textarea class="textarea" disabled placeholder="Please provide any addition information" name="extra"></textarea>
+            </div>
+        </div>
+
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button is-link" style="background-color: #19C4C7">Accept</button>
+            </div>
+            <div class="control">
+                <button class="button is-link is-light" style="color: #19C4C7" onClick="location.href='/'">Go Back</button>
+            </div>
+        </div>
+    </form>
+</section>
+<!-- END OF CONTENT -->
+
+</body>
+</html>

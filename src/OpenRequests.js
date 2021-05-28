@@ -26,7 +26,7 @@ export const OpenRequests = () => {
                                             {data.name}
                                         </div>
                                         <div className="column">
-                                            <button className="button is-link has-background-elanza">View details</button>
+                                            <button className="button is-link has-background-elanza" onClick="location.href='/view.html'">View details</button>
                                         </div>
                                     </div>
                                 </div>
