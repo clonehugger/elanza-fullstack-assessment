@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="main">
       <img src={logo} alt="" width="100" /><br />
-      Hello {data.name}, you called the backend {data.counter} times.
+      Hello {data.name}, you called the backend {data.counter} times!
     </div>
   );
 }
